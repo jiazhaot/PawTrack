@@ -1,19 +1,19 @@
-# COMP90018 Assignment - Software project
+# Software Group project
 
 ## PawTrack
 
 **PawTrack** is a mobile app that helps dog owners check weather conditions for safe walks, record walking routes, find nearby dogs, and discover dog-friendly facilities.
 
-## Tutorial 6 Group 3
+## Team member
+### Front-end Development
+- Hanxue Qiang, 
+- Jiazhao Teng, 
+- Ruilin Xu
+- Yifu Ding
 
-| Name | Student ID |
-|------|-----------|
-| Hanxue Qiang | 1589809 |
-| Jiazhao Teng | 1165933 |
-| Ning Yang | 1512424 |
-| Ruilin Xu | 1548555 |
-| Yifu Ding | 1663289 |
-| Yuantao Liao | 1609512 |
+### Back-end Development
+- Ning Yang 
+- Yuantao Liao
 
 ## Quick Start
 
