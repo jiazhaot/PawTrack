@@ -1,0 +1,84 @@
+RunMode: "debug"
+Version: "1.0.0"
+
+Gorm:
+  Debug: true
+  DBType: MySQL
+  MaxLifetime: 7200
+  MaxOpenConns: 150
+  MaxIdleConns: 50
+
+MySQL:
+  Enable: true
+  Host: "127.0.0.1"
+  Port: 3306
+  User: remote_user
+  Password: "123456"
+  DBName: mobile_backend
+  Parameters: charset=utf8mb4&parseTime=True&loc=Local&allowNativePasswords=true
+
+Redis:
+  Enable: true
+  Host: 127.0.0.1:6379
+  Password: ""
+  DB: 0
+
+CORS:
+  Enable: false
+  AllowOrigins: []
+  AllowMethods: ["GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH"]
+  AllowHeaders: ["Content-Type"]
+  AllowCredentials: true
+  MaxAge: 7200
+
+HTTP:
+  Host: "0.0.0.0"
+  Port: 9000
+  ShutdownTimeout: 5
+  ReadTimeout: 30
+  WriteTimeout: 300
+  IdleTimeout: 600
+  # https secure cookie
+  Secure: true
+  DelCookie: -1
+  HttpReadOnly: true
+
+Monitor:
+  Enable: false
+  Addr: "127.0.0.1:9000"
+  ConfigDir: ""
+
+Log:
+  # (1:fatal 2:error,3:warn,4:info,5:debug)
+  Level: 5
+  Format: "text"
+  Output: "stdout"
+  OutputFile: "/data/logs/pawtrack/backend.log"
+  OutputErrFile: "/data/logs/pawtrack/error.log"
+  EnableHook: true
+  HookLevels: ["info", "warn", "error"]
+  Hook: "gorm"
+  HookMaxThread: 1
+  HookMaxBuffer: 512
+  MaxSize: 2
+  MaxBackups: 90
+  MaxAge: 60
+  Compress: true
+
+ImageInfo:
+  AvatarPath: "/avatar"
+
+LogGormHook:
+  DBType: "mysql"
+  MaxLifetime: 7200
+  MaxOpenConns: 1
+  MaxIdleConns: 1
+  Table: "g_logger"
+
+Services:
+  Domain: "pawtrack.xyz"
+
+UserInfo:
+  ExpireTime: 2592000
+  # CookieExpireTime: 1
+  CookieExpireTime: 2592000
