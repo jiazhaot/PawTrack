@@ -6,8 +6,8 @@
 
 ## Team member
 ### Front-end Development
-- Hanxue Qiang, 
-- Jiazhao Teng, 
+- Hanxue Qiang
+- Jiazhao Teng
 - Ruilin Xu
 - Yifu Ding
 
