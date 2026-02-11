@@ -14,7 +14,7 @@ type Weather interface {
 
 // GetSecList
 func (w *webService) GetByLocation(lon float64, lat float64) (interface{}, error) {
-	reqURL := fmt.Sprintf("https://api.openweathermap.org/data/3.0/onecall?lat=%f&lon=%f&appid=1dd7e98e2d6f0fd562d07c2db494c47f", lat, lon)
+	reqURL := fmt.Sprintf("https://api.openweathermap.org/", lat, lon)
 	req, err := http.NewRequest("GET", reqURL, nil)
 	if err != nil {
 		logger.Errorf(w.Context, "create new request fail %+v", err)
